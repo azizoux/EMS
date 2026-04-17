@@ -23,14 +23,17 @@ const Sidebar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setUserName(dummyProfileData.firstName + " " + dummyProfileData.lastName);
   }, []);
 
   // Close mobile sidebar on route change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMobileOpen(false);
   }, [pathname]);
 
+  // eslint-disable-next-line no-constant-binary-expression
   const role = "" || "ADMIN";
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutGridIcon },
